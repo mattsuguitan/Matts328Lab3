@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html>
+<html lang="en-US">
 
 <head>
     <meta charset="utf-8">
@@ -55,7 +55,7 @@
     <main id="container">
         <div id="table">
 
-            <h2>Mountain List 3 - Washington</h2>
+            <h2>Mountain List - Washington</h2>
             <button onclick="sortTable()">Sort by Elevation</button>
             
 
@@ -82,12 +82,12 @@
         });
 
 
-        map.on('load', async () => {
+        async function geojsonFetch() {
 
             let response, mountain, washington, table;
             response = await fetch('mountain_files/mountain.geojson');
             mountain = await response.json();
-            response = await fetch('mountain_files/washington.json');
+            response = await fetch('mountain_files/washington.geojson');
             washington = await response.json();
 
 
@@ -107,9 +107,7 @@
 
 
 
-            map.on('load', () => {
-
-
+            map.on('load', function loadingData() {
 
                 map.addSource('mountain', {
                     type: 'geojson',
@@ -144,26 +142,19 @@
                     }
                 });
 
-
-
-
-
-
             });
 
+        }
 
+        geojsonFetch()
 
+        let btn = document.getElementsByTagName("button")[0];
 
-            geojsonFetch()
-                .catch(e => {
-                    console.log('There has been a problem with your fetch operation: ' + e.message);
-                });
-        });
+        btn.addEventListener('click', sortTable);
 
-
-
-        function sortTable() {
-            var table, rows, switching, i, x, y, shouldSwitch;
+        // define the function to sort table
+        function sortTable(e) {
+            let table, rows, switching, i, x, y, shouldSwitch;
             table = document.getElementsByTagName("table")[0];
             switching = true;
             /*Make a loop that will continue until
