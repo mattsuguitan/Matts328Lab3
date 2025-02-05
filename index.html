@@ -55,7 +55,7 @@
     <main id="container">
         <div id="table">
 
-            <h2>Mountain List 2 - Washington</h2>
+            <h2>Mountain List 3 - Washington</h2>
             <button onclick="sortTable()">Sort by Elevation</button>
             
 
@@ -82,7 +82,7 @@
         });
 
 
-        async function geojsonFetch() {
+        map.on('load', async () => {
 
             let response, mountain, washington, table;
             response = await fetch('mountain_files/mountain.geojson');
@@ -154,12 +154,11 @@
 
 
 
-        }
-
-        geojsonFetch()
-            .catch(e => {
-                console.log('There has been a problem with your fetch operation: ' + e.message);
-            });
+            geojsonFetch()
+                .catch(e => {
+                    console.log('There has been a problem with your fetch operation: ' + e.message);
+                });
+        });
 
 
 
