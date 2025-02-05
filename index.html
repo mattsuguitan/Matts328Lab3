@@ -56,7 +56,7 @@
         <div id="table">
 
             <h2>Mountain List - Washington</h2>
-            <button onclick="sortTable()">Sort test Magnitude</button>
+            <button onclick="sortTable()">Sort by Elevation</button>
             
 
             <table>
@@ -78,14 +78,14 @@
             container: 'map', // container ID
             style: 'mapbox://styles/mapbox/satellite-v9', // style URL
             zoom: 5.5, // starting zoom
-            center: [138.043, 38] // starting center
+            center: [-120.7070, 47.3349] // starting center
         });
 
 
         async function geojsonFetch() {
 
 
-            let response = await fetch('assets/earthquakes.geojson');
+            let response = await fetch('mountain_files/mountain.geojson');
 
             if (!response.ok) {
                 throw new Error(`HTTP error! status: ${response.status}`);
@@ -94,7 +94,7 @@
             let earthquakes = await response.json();
 
 
-            response = await fetch('assets/japan.json');
+            response = await fetch('mountain_files/washington.json');
 
             if (!response.ok) {
                 throw new Error(`HTTP error! status: ${response.status}`);
