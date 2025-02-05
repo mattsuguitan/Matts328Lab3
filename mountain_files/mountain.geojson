@@ -1,1 +1,140 @@
-{"type":"FeatureCollection","features":[{"type":"Feature","geometry":{"type":"Point","coordinates":[-121.7625,46.8523]},"properties":{"name":"Mount Rainier","elevation":14411,"range":"Cascade Range"}},{"type":"Feature","geometry":{"type":"Point","coordinates":[-122.0853,47.7284]},"properties":{"name":"Mount St. Helens","elevation":8364,"range":"Cascade Range"}},{"type":"Feature","geometry":{"type":"Point","coordinates":[-120.9261,47.2913]},"properties":{"name":"Mount Adams","elevation":12276,"range":"Cascade Range"}},{"type":"Feature","geometry":{"type":"Point","coordinates":[-123.4932,47.5337]},"properties":{"name":"Mount Olympus","elevation":7980,"range":"Olympic Mountains"}},{"type":"Feature","geometry":{"type":"Point","coordinates":[-121.8133,48.7763]},"properties":{"name":"Mount Baker","elevation":10781,"range":"Cascade Range"}},{"type":"Feature","geometry":{"type":"Point","coordinates":[-120.798,47.5271]},"properties":{"name":"Mount Stuart","elevation":9415,"range":"Cascade Range"}},{"type":"Feature","geometry":{"type":"Point","coordinates":[-121.7329,48.1695]},"properties":{"name":"Glacier Peak","elevation":10541,"range":"Cascade Range"}},{"type":"Feature","geometry":{"type":"Point","coordinates":[-121.7439,47.4954]},"properties":{"name":"Mount Si","elevation":4167,"range":"Cascade Range"}},{"type":"Feature","geometry":{"type":"Point","coordinates":[-121.6093,48.7773]},"properties":{"name":"Mount Shuksan","elevation":9127,"range":"North Cascades"}}]}
+{
+    "type": "FeatureCollection",
+    "features": [
+      {
+        "type": "Feature",
+        "geometry": {
+          "type": "Point",
+          "coordinates": [
+            -121.7625,
+            46.8523
+          ]
+        },
+        "properties": {
+          "name": "Mount Rainier",
+          "elevation": 14411,
+          "range": "Cascade Range"
+        }
+      },
+      {
+        "type": "Feature",
+        "geometry": {
+          "type": "Point",
+          "coordinates": [
+            -122.0853,
+            47.7284
+          ]
+        },
+        "properties": {
+          "name": "Mount St. Helens",
+          "elevation": 8364,
+          "range": "Cascade Range"
+        }
+      },
+      {
+        "type": "Feature",
+        "geometry": {
+          "type": "Point",
+          "coordinates": [
+            -120.9261,
+            47.2913
+          ]
+        },
+        "properties": {
+          "name": "Mount Adams",
+          "elevation": 12276,
+          "range": "Cascade Range"
+        }
+      },
+      {
+        "type": "Feature",
+        "geometry": {
+          "type": "Point",
+          "coordinates": [
+            -123.4932,
+            47.5337
+          ]
+        },
+        "properties": {
+          "name": "Mount Olympus",
+          "elevation": 7980,
+          "range": "Olympic Mountains"
+        }
+      },
+      {
+        "type": "Feature",
+        "geometry": {
+          "type": "Point",
+          "coordinates": [
+            -121.8133,
+            48.7763
+          ]
+        },
+        "properties": {
+          "name": "Mount Baker",
+          "elevation": 10781,
+          "range": "Cascade Range"
+        }
+      },
+      {
+        "type": "Feature",
+        "geometry": {
+          "type": "Point",
+          "coordinates": [
+            -120.798,
+            47.5271
+          ]
+        },
+        "properties": {
+          "name": "Mount Stuart",
+          "elevation": 9415,
+          "range": "Cascade Range"
+        }
+      },
+      {
+        "type": "Feature",
+        "geometry": {
+          "type": "Point",
+          "coordinates": [
+            -121.7329,
+            48.1695
+          ]
+        },
+        "properties": {
+          "name": "Glacier Peak",
+          "elevation": 10541,
+          "range": "Cascade Range"
+        }
+      },
+      {
+        "type": "Feature",
+        "geometry": {
+          "type": "Point",
+          "coordinates": [
+            -121.7439,
+            47.4954
+          ]
+        },
+        "properties": {
+          "name": "Mount Si",
+          "elevation": 4167,
+          "range": "Cascade Range"
+        }
+      },
+      {
+        "type": "Feature",
+        "geometry": {
+          "type": "Point",
+          "coordinates": [
+            -121.6093,
+            48.7773
+          ]
+        },
+        "properties": {
+          "name": "Mount Shuksan",
+          "elevation": 9127,
+          "range": "North Cascades"
+        }
+      }
+    ]
+  }
