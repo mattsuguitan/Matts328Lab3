@@ -135,6 +135,81 @@
           "elevation": 9127,
           "range": "North Cascades"
         }
+      },
+      {
+        "type": "Feature",
+        "geometry": {
+          "type": "Point",
+          "coordinates": [
+            -120.8075,
+            48.1625
+          ]
+        },
+        "properties": {
+          "name": "Mount Fernow",
+          "elevation": 9254,
+          "range": "Entiat Mountains"
+        }
+      },
+      {
+        "type": "Feature",
+        "geometry": {
+          "type": "Point",
+          "coordinates": [
+            -120.9115,
+            48.4831
+          ]
+        },
+        "properties": {
+          "name": "Goode Mountain",
+          "elevation": 9254,
+          "range": "North Cascades"
+        }
+      },
+      {
+        "type": "Feature",
+        "geometry": {
+          "type": "Point",
+          "coordinates": [
+            -120.9999,
+            48.4943
+          ]
+        },
+        "properties": {
+          "name": "Buckner Mountain",
+          "elevation": 9119,
+          "range": "North Cascades"
+        }
+      },
+      {
+        "type": "Feature",
+        "geometry": {
+          "type": "Point",
+          "coordinates": [
+            -120.9562,
+            48.7728
+          ]
+        },
+        "properties": {
+          "name": "Jack Mountain",
+          "elevation": 9075,
+          "range": "Hozameen Range"
+        }
+      },
+      {
+        "type": "Feature",
+        "geometry": {
+          "type": "Point",
+          "coordinates": [
+            -120.5017,
+            48.5152
+          ]
+        },
+        "properties": {
+          "name": "North Gardner Mountain",
+          "elevation": 8961,
+          "range": "North Cascades"
+        }
       }
     ]
   }
