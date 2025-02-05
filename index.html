@@ -118,23 +118,6 @@
 
             map.on('load', function loadingData() {
 
-                map.addSource('mountain', {
-                    type: 'geojson',
-                    data: mountain
-                });
-
-                map.addLayer({
-                    'id': 'mountain-layer',
-                    'type': 'circle',
-                    'source': 'mountain',
-                    'paint': {
-                        'circle-radius': 8,
-                        'circle-stroke-width': 2,
-                        'circle-color': 'red',
-                        'circle-stroke-color': 'white'
-                    }
-                });
-
 
                 map.addSource('washington', {
                     type: 'geojson',
@@ -148,6 +131,23 @@
                     'paint': {
                         'fill-color': '#FFFFE0', // yellow color fill
                         'fill-opacity': 0.5
+                    }
+                });
+
+                map.addSource('mountain', {
+                    type: 'geojson',
+                    data: mountain
+                });
+
+                map.addLayer({
+                    'id': 'mountain-layer',
+                    'type': 'circle',
+                    'source': 'mountain',
+                    'paint': {
+                        'circle-radius': 8,
+                        'circle-stroke-width': 2,
+                        'circle-color': 'blue',
+                        'circle-stroke-color': 'white'
                     }
                 });
 
