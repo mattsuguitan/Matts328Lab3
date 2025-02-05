@@ -84,42 +84,24 @@
 
         async function geojsonFetch() {
 
-
-            let response = await fetch('mountain_files/mountain.geojson');
-
-            if (!response.ok) {
-                throw new Error(`HTTP error! status: ${response.status}`);
-            }
-
-            let earthquakes = await response.json();
-
-
+            let response, mountain, washington, table;
+            response = await fetch('mountain_files/mountain.geojson');
+            mountain = await response.json();
             response = await fetch('mountain_files/washington.json');
-
-            if (!response.ok) {
-                throw new Error(`HTTP error! status: ${response.status}`);
-            }
-
-            let japan = await response.json();
+            washington = await response.json();
 
 
-            var table = document.getElementsByTagName("table");
-            for (let i = 0; i < earthquakes.features.length; i++) {
-                // console.log(earthquakes.features[i].properties.id);
-
-                var lng = await earthquakes.features[i].geometry.coordinates[0];
-                var lat = await earthquakes.features[i].geometry.coordinates[1];
-
+            table = document.getElementsByTagName("table")[0];
+            let row, cell1, cell2, cell3;
+            for (let i = 0; i < mountain.features.length; i++) {
                 // Create an empty <tr> element and add it to the 1st position of the table:
-                var row = table[0].insertRow(-1);
-
-                var cell1 = row.insertCell(0);
-                var cell2 = row.insertCell(1);
-                var cell3 = row.insertCell(2);
-                cell1.innerHTML = await earthquakes.features[i].properties.id;
-                cell2.innerHTML = await earthquakes.features[i].properties.mag;
-                cell3.innerHTML = await new Date(earthquakes.features[i].properties.time).toLocaleDateString("en-US");
-
+                row = table.insertRow(-1);
+                cell1 = row.insertCell(0);
+                cell2 = row.insertCell(1);
+                cell3 = row.insertCell(2);
+                cell1.innerHTML = mountain.features[i].properties.name;
+                cell2.innerHTML = mountain.features[i].properties.elevation;
+                cell3.innerHTML = mountain.features[i].properties.range;
             }
 
 
@@ -129,15 +111,15 @@
 
 
 
-                map.addSource('earthquakes', {
+                map.addSource('mountain', {
                     type: 'geojson',
-                    data: earthquakes
+                    data: mountain
                 });
 
                 map.addLayer({
-                    'id': 'earthquakes-layer',
+                    'id': 'mountain-layer',
                     'type': 'circle',
-                    'source': 'earthquakes',
+                    'source': 'mountain',
                     'paint': {
                         'circle-radius': 8,
                         'circle-stroke-width': 2,
@@ -147,15 +129,15 @@
                 });
 
 
-                map.addSource('japan', {
+                map.addSource('washington', {
                     type: 'geojson',
-                    data: japan
+                    data: washington
                 });
 
                 map.addLayer({
-                    'id': 'japan-layer',
+                    'id': 'washington-layer',
                     'type': 'fill',
-                    'source': 'japan',
+                    'source': 'washington',
                     'paint': {
                         'fill-color': '#0080ff', // blue color fill
                         'fill-opacity': 0.5
